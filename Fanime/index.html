@@ -6,20 +6,26 @@
     <title>Outfit Designer</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="save.js" defer></script>
+
 </head>
 <body>
     <div class="container">
         <section class="tools-board">
             <div class="row">
                 <label class="title">Options</label>
-                <ul class="options">
-                    <li class="option active tool" id="brush">
-                      <img class="icon" src="assets/pen.png" alt="">
+                <ul id="toolbox" class="options">
+                    <li class="option tool" id="brush">
+                        <img class="icon" src="assets/pen.png" alt="">
                         <span>Brush</span>
                     </li>
                     <li class="option tool" id="eraser">
-                      <img class="icon" src="assets/eraser.png" alt="">
+                        <img class="icon" src="assets/eraser.png" alt="">
                         <span>Eraser</span>
+                    </li>
+            
+                    <li class="option tool" id="load">
+                        <input type="file" id="uploadImage" accept="image/*">
                     </li>
                     <li class="option">
                         <input type="range" id="size-slider" min="1" max="30" value="5">
@@ -45,11 +51,17 @@
             <div class="row">
                 <label class="title">Outfit</label>
                 <ul class="options">
+                    <li class="option tool" id="default">
+                        <span>default</span>
+                    </li>
                     <li class="option tool" id="shirt">
                         <span>Shirt</span>
                     </li>
                     <li class="option tool" id="shirt2">
                         <span>Shirt2</span>
+                    </li>
+                    <li class="option tool" id="shirt3">
+                        <span>Shirt3</span>
                     </li>
                 </ul>
             </div>
