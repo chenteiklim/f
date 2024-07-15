@@ -1,5 +1,6 @@
 colorBtns = document.querySelectorAll(".colors .option"),
 colorPicker = document.querySelector("#color-picker"),
+toolBtns = document.querySelectorAll(".tool"),
 
 saveImg = document.querySelector(".save-img"),
 saveImg.addEventListener("click", () => {
@@ -23,4 +24,13 @@ colorPicker.addEventListener("change", () => {
     // passing picked color value from color picker to last color btn background
     colorPicker.parentElement.style.background = colorPicker.value;
     colorPicker.parentElement.click();
+});
+
+toolBtns.forEach(btn => {
+    btn.addEventListener("click", () => { // adding click event to all tool option
+        // removing active class from the previous option and adding on current clicked option
+        document.querySelector(".options .active").classList.remove("active");
+        btn.classList.add("active");
+        selectedTool = btn.id;
+    });
 });
